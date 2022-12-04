@@ -23,8 +23,8 @@ function ContactInfo() {
       icon: <MdPhoneInTalk />,
     },
     {
-      contact: "rana.buddy@gmail.com",
-      link: "mailto:rana.buddy@gmail.com",
+      contact: "rana@shannonit.org",
+      link: "mailto:rana@shannonit.org",
       icon: <MdEmail />,
     },
     {

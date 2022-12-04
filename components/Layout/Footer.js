@@ -33,7 +33,7 @@ function Footer() {
           </div>
           <div className=" flex items-center gap-2">
             <MdEmail className="text-lg" />
-            <a href="mailto:rana.buddy@gmail.com">rana.buddy@gmail.com</a>
+            <a href="mailto:rana@shannonit.org">rana@shannonit.org</a>
           </div>
           <div className=" flex items-center gap-2">
             <MdLocationPin className="text-lg" />
