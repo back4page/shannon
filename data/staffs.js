@@ -7,10 +7,16 @@ export const staffs = [
   },
   {
     id: 2,
-    name: "Moshiur Rahman",
-    position: "Head of Business Development & Marketing",
-    img: "/images/staffs/moshiur.jpg",
+    name: "Simon Ahmed",
+    position: "Chief Marketing Officer",
+    img: "/images/staffs/simon.jpg",
   },
+  // {
+  //   id: 2,
+  //   name: "Moshiur Rahman",
+  //   position: "Head of Business Development & Marketing",
+  //   img: "/images/staffs/moshiur.jpg",
+  // },
   {
     id: 3,
     name: "Yeasir Ahamed",
