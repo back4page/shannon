@@ -1,53 +1,53 @@
-import * as Yup from "yup";
-import { Formik, Form } from "formik";
-import { MdPhoneInTalk, MdEmail, MdLocationPin } from "react-icons/md";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import * as Yup from 'yup';
+import { Formik, Form } from 'formik';
+import { MdPhoneInTalk, MdEmail, MdLocationPin } from 'react-icons/md';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 // import TextField from "./TextField";
-import { TextField, TextArea } from "./InputField";
+import { TextField, TextArea } from './InputField';
 import {
   SlideLeftFade,
   SlideRightFade,
   SlideTopFade,
   StaggerLeftFade,
   StaggerParent,
-} from "../../animations/scroll";
+} from '../../animations/scroll';
 
-const API_URL = "https://boolalgback.herokuapp.com/saveinfo";
+const API_URL = 'https://boolalgback.herokuapp.com/saveinfo';
 
 function ContactInfo() {
   const contactData = [
     {
-      contact: "+8801743136127",
-      link: "https://api.whatsapp.com/send?phone=+8801743136127",
+      contact: '+8801743136127',
+      link: 'https://api.whatsapp.com/send?phone=+8801743136127',
       icon: <MdPhoneInTalk />,
     },
     {
-      contact: "rana@shannonit.org",
-      link: "mailto:rana@shannonit.org",
+      contact: 'rana@shannonit.org',
+      link: 'mailto:rana@shannonit.org',
       icon: <MdEmail />,
     },
     {
-      contact: "41/14-A Afsar Uddin Lane,1209, Zigatola - Dhaka",
+      contact: '41/14-A Afsar Uddin Lane,1209, Zigatola - Dhaka',
       icon: <MdLocationPin />,
     },
   ];
 
   const initialvalues = {
-    name: "",
-    email: "",
-    number: "",
-    message: "",
+    name: '',
+    email: '',
+    number: '',
+    message: '',
   };
 
   const validate = Yup.object({
-    name: Yup.string().required("Name is required"),
-    email: Yup.string().required("Email is required").email("Invalid Email"),
-    number: Yup.string().required("Number is required"),
-    message: Yup.string().required("Message is required"),
+    name: Yup.string().required('Name is required'),
+    email: Yup.string().required('Email is required').email('Invalid Email'),
+    number: Yup.string().required('Number is required'),
+    message: Yup.string().required('Message is required'),
   });
 
-  const handleSubmit = (values) => {
+  const handleSubmit = values => {
     console.log(values);
   };
 
@@ -100,11 +100,12 @@ function ContactInfo() {
                           {data.icon}
                         </span>
                         {data.link ? (
-                          <a href={data.link}>{data.contact}</a>
+                          <a href={data.link} target="_blank" rel="noreferrer">
+                            {data.contact}
+                          </a>
                         ) : (
                           <p>{data.contact}</p>
                         )}
-                        {/* <a href={data?.link}>{data.contact}</a> */}
                       </div>
                     </StaggerLeftFade>
                   </div>
@@ -125,7 +126,7 @@ function ContactInfo() {
                 validationSchema={validate}
                 onSubmit={handleSubmit}
               >
-                {(formik) => (
+                {formik => (
                   <Form>
                     <div className="mt-3 space-y-11 lg:px-10">
                       <TextField label="Your Name *" name="name" type="text" />
