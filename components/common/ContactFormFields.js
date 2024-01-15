@@ -5,7 +5,7 @@ const InputFiled = ({ label, name, type, placeholder, formik }) => {
   return (
     <div className="mb-3">
       <label
-        className="block text-gray-400 text-sm font-bold mb-2"
+        className="block text-gray-600 text-sm font-bold mb-2"
         htmlFor={name}
       >
         {label}

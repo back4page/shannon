@@ -24,7 +24,7 @@ function Home() {
       <Comments />
       <ContactInfo />
       <Search />
-      {/* <ContactForm /> */}
+      <ContactForm />
       {/* <div className="bg-red-300 container p-20">
         
         <div className="relative w-full h-[600px] clip">

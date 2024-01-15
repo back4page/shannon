@@ -1,21 +1,23 @@
-import { useState, useEffect, useId } from "react";
+import { useState, useEffect, useId } from 'react';
 
-import Link from "next/link";
+import Link from 'next/link';
 // import Image from "next/image";
-import Router, { useRouter } from "next/router";
-import DropDown from "./DropDown";
-import { navLinks } from "./navLinks";
-import { motion, AnimatePresence } from "framer-motion";
-import HamburgerMenu from "./HamburgerMenu";
-import { HeightResize } from "../../animations/height";
+import Router, { useRouter } from 'next/router';
+import DropDown from './DropDown';
+import { navLinks } from './navLinks';
+import { motion, AnimatePresence } from 'framer-motion';
+import HamburgerMenu from './HamburgerMenu';
+import { HeightResize } from '../../animations/height';
+import Image from 'next/image';
+import brandLogo from '../../public/images/shanon-logo.png';
 
 function Header() {
   const [scroll, setScroll] = useState(false);
   const [toggle, setToggle] = useState(false);
-  const [showSubMenu, setShowSubMenu] = useState("");
+  const [showSubMenu, setShowSubMenu] = useState('');
   const uId = useId();
 
-  Router.events.on("routeChangeStart", (url) => {
+  Router.events.on('routeChangeStart', url => {
     setToggle(false);
   });
 
@@ -33,7 +35,7 @@ function Header() {
     }
   };
 
-  const menu = (index) => {
+  const menu = index => {
     if (showSubMenu === index) {
       return setShowSubMenu(null);
     }
@@ -41,31 +43,31 @@ function Header() {
   };
 
   useEffect(() => {
-    window.addEventListener("scroll", changeBackground);
+    window.addEventListener('scroll', changeBackground);
     return () => {
-      window.removeEventListener("scroll", changeBackground);
+      window.removeEventListener('scroll', changeBackground);
     };
   }, []);
 
-  const activeLinkClass = (path) =>
+  const activeLinkClass = path =>
     pathname === path
-      ? "text-custom-orange"
-      : "hover:text-custom-orange transition duration-300";
+      ? 'text-custom-orange'
+      : 'hover:text-custom-orange transition duration-300';
 
-  const activeLinkBorder = (path) =>
-    pathname === path ? "absolute w-full border border-custom-orange" : "";
+  const activeLinkBorder = path =>
+    pathname === path ? 'absolute w-full border border-custom-orange' : '';
 
-  const activeSubLinkClass = (navLink) => {
-    const value = navLink.subLinks.find((subLink) => subLink.link === pathname);
+  const activeSubLinkClass = navLink => {
+    const value = navLink.subLinks.find(subLink => subLink.link === pathname);
     if (pathname === value?.link) {
-      return "text-custom-orange cursor-pointer";
+      return 'text-custom-orange cursor-pointer';
     } else {
-      return "hover:text-custom-orange transition duration-300 cursor-pointer";
+      return 'hover:text-custom-orange transition duration-300 cursor-pointer';
     }
   };
 
-  const checkSubLinkActive = (navLink) => {
-    const value = navLink.subLinks.find((subLink) => subLink.link === pathname);
+  const checkSubLinkActive = navLink => {
+    const value = navLink.subLinks.find(subLink => subLink.link === pathname);
     if (pathname === value?.link) {
       return true;
     } else {
@@ -73,12 +75,12 @@ function Header() {
     }
   };
 
-  const activeSubLinkBorder = (navLink) => {
-    const value = navLink.subLinks.find((subLink) => subLink.link === pathname);
+  const activeSubLinkBorder = navLink => {
+    const value = navLink.subLinks.find(subLink => subLink.link === pathname);
     if (pathname === value?.link) {
-      return "absolute w-full border border-custom-orange";
+      return 'absolute w-full border border-custom-orange';
     } else {
-      return "";
+      return '';
     }
   };
 
@@ -88,31 +90,21 @@ function Header() {
         className={`duration-200 ${
           scroll
             ? `py-4 ${
-                pathname === "/"
-                  ? "bg-custom-gray text-white shadow-lg"
-                  : "bg-gray-200  shadow-lg"
+                pathname === '/'
+                  ? 'bg-custom-gray text-white shadow-lg'
+                  : 'bg-gray-200  shadow-lg'
               } `
             : `py-14  ${
-                pathname === "/"
-                  ? "bg-transparent text-white"
-                  : "bg-white text-black duration-500"
+                pathname === '/'
+                  ? 'bg-transparent text-white'
+                  : 'bg-white text-black duration-500'
               } `
         }`}
       >
         <div className="px-4 lg:container flex justify-between items-center">
           <div className="">
             <Link href="/" passHref>
-              {/* <div className="w-[50px] h-[50px]">
-                <Image
-                  src="/images/logo/.jpg"
-                  alt="Shannon IT"
-                  width={238}
-                  height={212}
-                />
-              </div> */}
-              <h1 className="text-[22px] font-Shrikhand text-emerald-500 cursor-pointer border px-2 py-1 border-emerald-500/50 select-none underline underline-offset-4">
-                Shannon IT
-              </h1>
+              <Image src={brandLogo} alt="brand logo" width={200} height={50} />
             </Link>
           </div>
 
@@ -132,7 +124,7 @@ function Header() {
                       {pathname === navLink.link && !scroll ? (
                         <motion.div
                           layoutId={uId}
-                          transition={{ duration: 0.2, ease: "easeOut" }}
+                          transition={{ duration: 0.2, ease: 'easeOut' }}
                           className="relative"
                         >
                           <div className={activeLinkBorder(navLink.link)}></div>
@@ -166,7 +158,7 @@ function Header() {
                         {checkSubLinkActive(navLink) && !scroll ? (
                           <motion.div
                             layoutId={uId}
-                            transition={{ duration: 0.2, ease: "easeOut" }}
+                            transition={{ duration: 0.2, ease: 'easeOut' }}
                             className="relative"
                           >
                             <div className={activeSubLinkBorder(navLink)}></div>
@@ -200,8 +192,8 @@ function Header() {
                                     key={i}
                                     className={`flex flex-col hover:text-custom-orange hover:bg-slate-200 cursor-pointer duration-300  ${
                                       pathname === subLink.link
-                                        ? "bg-slate-200 text-custom-orange "
-                                        : "text-white  "
+                                        ? 'bg-slate-200 text-custom-orange '
+                                        : 'text-white  '
                                     }}`}
                                   >
                                     <Link href={subLink.link}>

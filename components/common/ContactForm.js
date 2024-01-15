@@ -27,10 +27,15 @@ const ContactForm = () => {
   // border-2 border-red-600
 
   return (
-    <div>
-      <div className="text-center heading-lg leading-snug lg:text-[26px]">
-        <h1>Have questions?</h1>
-        <h1>We call you back!</h1>
+    <div className="container">
+      <div className="text-center">
+        <h1 className="text-xl font-bold">Let&apos;s talk</h1>
+        <p>
+          Just make one call and get a reply within one minute. If email is the
+          preferable way of communication for you, you are welcome to contact us
+          just right now. Your personal manager will take into consideration all
+          your requires with pleasure.
+        </p>
       </div>
       <form onSubmit={formik.handleSubmit}>
         <InputFiled
@@ -56,6 +61,38 @@ const ContactForm = () => {
           placeholder="Your Phone Number"
           formik={formik}
         />
+        <div className="mb-3">
+          <label
+            className="block text-gray-600 text-sm font-bold mb-2"
+            htmlFor="textMessage"
+          >
+            Message
+          </label>
+          <textarea
+            rows="4"
+            className={`shadow rounded-md w-full py-2 px-3 bg-gray-300 mb-3 leading-tight focus:outline-none focus:shadow-outline ${
+              formik.touched.message &&
+              formik.errors.message &&
+              'border-2 border-red-400'
+            }`}
+            id="textMessage"
+            name="message"
+            type="text"
+            placeholder="Type Your Message"
+            value={formik.values.message}
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
+          />
+          {formik.touched.message && formik.errors.message && (
+            <p className="text-red-400 text-xs">{formik.errors.message}</p>
+          )}
+        </div>
+        <button
+          className="shadow ml-3 inline-block bg-green-300 hover:bg-green-400 focus:shadow-outline focus:outline-none text-gray-600 font-semibold py-2 px-4 rounded"
+          type="submit"
+        >
+          Submit
+        </button>
       </form>
     </div>
   );
