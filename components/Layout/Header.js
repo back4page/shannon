@@ -104,7 +104,13 @@ function Header() {
         <div className="px-4 lg:container flex justify-between items-center">
           <div className="">
             <Link href="/" passHref>
-              <Image src={brandLogo} alt="brand logo" width={200} height={50} />
+              <Image
+                src={brandLogo}
+                alt="brand logo"
+                width={200}
+                height={50}
+                className="cursor-pointer"
+              />
             </Link>
           </div>
 
