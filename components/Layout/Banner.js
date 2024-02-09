@@ -1,15 +1,15 @@
 //---with react-scroll-parallax
-import { useRouter } from "next/router";
-import Link from "next/link";
-import Image from "next/image";
-import { motion } from "framer-motion";
-import useMeasure from "react-use-measure";
+import { useRouter } from 'next/router';
+import Link from 'next/link';
+import Image from 'next/image';
+import { motion } from 'framer-motion';
+import useMeasure from 'react-use-measure';
 import {
   BannerFade,
   BannerScaleFade,
   BannerSlideFade,
-} from "../../animations/banner";
-import { Parallax } from "react-scroll-parallax";
+} from '../../animations/banner';
+import { Parallax } from 'react-scroll-parallax';
 
 function Banner({ pageDetails }) {
   const { pathname } = useRouter();
@@ -21,25 +21,25 @@ function Banner({ pageDetails }) {
     <motion.div
       // initial={pathname === "/" ? { y: 0 } : { y: "150px" }}
       // animate={{ height: height || "auto", ...y }}
-      animate={{ height: height || "auto" }}
-      transition={{ duration: 0.7, ease: "easeOut" }}
+      animate={{ height: height || 'auto' }}
+      transition={{ duration: 0.7, ease: 'easeOut' }}
       className="overflow-hidden"
     >
       <div className="" ref={ref}>
         <div
           className={` ${
-            pathname === "/" ? "h-screen" : "h-[420px] lg:h-[560px]"
+            pathname === '/' ? 'h-screen' : 'h-[420px] lg:h-[560px]'
           }`}
         >
           <Parallax speed={-20}>
-            <div className="relative w-full h-screen">
-              <Image
+            <div className="relative w-full h-screen bg-gray-600">
+              {/* <Image
                 src="/images/banner.jpg"
                 alt="banner"
                 layout="fill"
                 objectFit="cover"
                 priority
-              />
+              /> */}
             </div>
           </Parallax>
         </div>
@@ -57,7 +57,7 @@ function Banner({ pageDetails }) {
             <div className="">
               <BannerFade>
                 <div className="overflow-hidden">
-                  {pathname === "/" && (
+                  {pathname === '/' && (
                     <p className="mt-7 text-gray-200">
                       We combine creativity, technologies and passion to bring
                       you the best results in web design. Join our community to
@@ -69,7 +69,7 @@ function Banner({ pageDetails }) {
 
               <div className="w-[130px] lg:w-[190px]">
                 <BannerScaleFade>
-                  {pathname === "/" && (
+                  {pathname === '/' && (
                     <Link href="/more-information" passHref>
                       <a>
                         <button
