@@ -24,7 +24,7 @@ function Home() {
       <Staff />
       <Counts />
       <Comments />
-      <ContactInfo />
+      {/* <ContactInfo /> */}
 
       <ContactUs>
         <Address />

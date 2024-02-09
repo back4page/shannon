@@ -81,12 +81,14 @@ const ContactForm = () => {
             <p className="text-red-400 text-xs">{formik.errors.message}</p>
           )}
         </div>
-        <button
-          className="shadow ml-3 inline-block bg-green-300 hover:bg-green-400 focus:shadow-outline focus:outline-none text-gray-600 font-semibold py-2 px-4 rounded"
-          type="submit"
-        >
-          Submit
-        </button>
+        <div className="flex justify-end">
+          <button
+            className="shadow ml-3 inline-block bg-green-300 hover:bg-green-400 focus:shadow-outline focus:outline-none text-gray-600 font-semibold py-2 px-4 rounded"
+            type="submit"
+          >
+            Submit
+          </button>
+        </div>
       </form>
     </div>
   );
