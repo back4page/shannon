@@ -10,6 +10,8 @@ import Search from '../components/Home/Search';
 import CustomSlider from '../components/CustomSlider';
 import SliderSwiper from '../components/SliderSwiper';
 import ContactForm from '../components/common/ContactForm';
+import ContactUs from '../components/common/ContactUs';
+import Address from '../components/common/Address';
 // import Image from "next/image";
 
 function Home() {
@@ -23,8 +25,12 @@ function Home() {
       <Counts />
       <Comments />
       <ContactInfo />
+
+      <ContactUs>
+        <Address />
+        <ContactForm />
+      </ContactUs>
       <Search />
-      <ContactForm />
       {/* <div className="bg-red-300 container p-20">
         
         <div className="relative w-full h-[600px] clip">

@@ -1,6 +1,7 @@
 import * as Yup from 'yup';
 import { useFormik } from 'formik';
 import InputFiled from './ContactFormFields';
+import axios from 'axios';
 
 const ContactForm = () => {
   const formik = useFormik({
@@ -22,21 +23,14 @@ const ContactForm = () => {
     }),
     onSubmit: values => {
       alert(JSON.stringify(values, null, 2));
+      // come back and handle data 🚩🚩🚩🚩🚩🚩
+      // must be clear data after successfully submited data
     },
   });
   // border-2 border-red-600
 
   return (
-    <div className="container">
-      <div className="text-center">
-        <h1 className="text-xl font-bold">Let&apos;s talk</h1>
-        <p>
-          Just make one call and get a reply within one minute. If email is the
-          preferable way of communication for you, you are welcome to contact us
-          just right now. Your personal manager will take into consideration all
-          your requires with pleasure.
-        </p>
-      </div>
+    <div>
       <form onSubmit={formik.handleSubmit}>
         <InputFiled
           label="Your Name"
