@@ -1,9 +1,9 @@
 //---with react-scroll-parallax
-import Image from "next/image";
-import { Parallax } from "react-scroll-parallax";
-import useMenu from "../../hooks/useMenu";
-import { Fade, ScaleFade, SlideTopFade } from "../../animations/scroll";
-import ModalContact from "../Modal/ModalContact";
+import Image from 'next/image';
+import { Parallax } from 'react-scroll-parallax';
+import useMenu from '../../hooks/useMenu';
+import { Fade, ScaleFade, SlideTopFade } from '../../animations/scroll';
+import ModalContact from '../Modal/ModalContact';
 
 function Contact() {
   const { showMenu: showModal, setShowMenu: setShowModal, node } = useMenu();
@@ -12,13 +12,13 @@ function Contact() {
     <div className="">
       <div className="relative h-[600px] overflow-hidden">
         <Parallax speed={-10}>
-          <div className="relative w-full h-screen">
-            <Image
+          <div className="relative w-full h-screen bg-gray-600">
+            {/* <Image
               src="/images/banner.jpg"
               alt="image"
               layout="fill"
               objectFit="cover"
-            />
+            /> */}
           </div>
         </Parallax>
 
