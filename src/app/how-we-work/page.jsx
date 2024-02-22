@@ -4,25 +4,24 @@ const page = () => {
   const processDescStyle = 'text-gray-600';
   return (
     <>
-      <section className="flex overflow-hidden relative flex-col items-start self-stretch px-20 py-12 w-full min-h-[355px] max-md:px-5 max-md:max-w-full">
-        <img
-          loading="lazy"
-          src={'./product.png'}
-          className="object-cover absolute inset-0 size-full"
-          alt=""
-        />
-        <div className="relative mt-3.5 ml-9 text-6xl font-semibold text-white max-md:max-w-full max-md:text-4xl">
-          Project Management out, Product <br />
-          Delivery in
+      <section className="how-we-work w-screen">
+        <div className="max-w-[1400px] mx-auto py-12 px-3">
+          <div className="max-w-[1200px] mx-auto">
+            <div className="text-6xl font-semibold text-white">
+              Project Management out, Product <br />
+              Delivery in
+            </div>
+            <p className="text-gray-200 py-6">
+              We pride ourselves on our methodical approach, combining
+              meticulous planning with agile execution. Our process begins with
+              a deep understanding of your needs, followed by collaborative
+              strategizing and transparent communication every step of the way.
+              With a commitment to excellence and continuous improvement, we
+              deliver results that exceed expectations, ensuring your
+              satisfaction and success.
+            </p>
+          </div>
         </div>
-        <p className="relative mt-4 mb-3.5 ml-9 text-base leading-7 text-justify text-zinc-300 w-[984px] max-md:max-w-full">
-          We pride ourselves on our methodical approach, combining meticulous
-          planning with agile execution. Our process begins with a deep
-          understanding of your needs, followed by collaborative strategizing
-          and transparent communication every step of the way. With a commitment
-          to excellence and continuous improvement, we deliver results that
-          exceed expectations, ensuring your satisfaction and success.
-        </p>
       </section>
       <div className="bg-gradient-to-r from-sky-100 to-orange-50">
         <div className="px-3 md:px-12 py-10 max-w-[1400px] mx-auto">

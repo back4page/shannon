@@ -12,7 +12,8 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
-.product {
+.product,
+.how-we-work {
   background-image: url('../../public/product.png');
   background-repeat: no-repeat;
   background-size: cover;
