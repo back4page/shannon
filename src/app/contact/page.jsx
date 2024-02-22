@@ -6,7 +6,7 @@ const ContactPage = () => {
   ];
   return (
     <>
-      <main className="flex flex-col items-center bg-gradient-to-r from-violet-200 to-pink-200">
+      <main className="bg-gradient-to-r from-sky-100 to-orange-50">
         <section className="contact w-screen">
           <div className="max-w-[1400px] mx-auto py-12 px-3">
             <div className="max-w-[1200px] mx-auto">
@@ -27,7 +27,7 @@ const ContactPage = () => {
           </div>
         </section>
 
-        <section className="w-[80%] mt-10 px-11 py-12 bg-white rounded-xl max-md:px-5">
+        <section className="max-w-[1200px] mx-auto mt-10 px-2 py-12 bg-white rounded-xl max-md:px-5">
           <div className="flex gap-5 max-md:flex-col max-md:gap-0 max-md:items-center">
             <div className="flex flex-col w-[35%] max-md:w-full">
               <div className="mt-32 text-2xl flex flex-col justify-center font-semibold text-center text-zinc-800 max-md:mt-10">
