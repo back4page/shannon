@@ -16,13 +16,12 @@ const page = () => {
           Delivery in
         </div>
         <p className="relative mt-4 mb-3.5 ml-9 text-base leading-7 text-justify text-zinc-300 w-[984px] max-md:max-w-full">
-          Have a question, comment, or suggestion? We'd love to hear from you!
-          Feel free to reach out to us using the form below, or contact us
-          directly via email or phone. Our team is here to assist you and
-          provide the information you need. Don't hesitate to connect with us on
-          social media as well - we're always happy to engage with our
-          community. Your feedback is valuable to us, and we look forward to
-          hearing from you soon!
+          We pride ourselves on our methodical approach, combining meticulous
+          planning with agile execution. Our process begins with a deep
+          understanding of your needs, followed by collaborative strategizing
+          and transparent communication every step of the way. With a commitment
+          to excellence and continuous improvement, we deliver results that
+          exceed expectations, ensuring your satisfaction and success.
         </p>
       </section>
       <div className="bg-gradient-to-r from-sky-100 to-orange-50">
