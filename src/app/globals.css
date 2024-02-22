@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.about {
+  background-image: url('../../public/about.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.service {
+  background-image: url('../../public/services.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.product {
+  background-image: url('../../public/product.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.contact {
+  background-image: url('../../public/contact.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
