@@ -27,7 +27,7 @@ const ContactPage = () => {
           </div>
         </section>
 
-        <section className="max-w-[1200px] mx-auto mt-10 px-2 py-12 bg-white rounded-xl max-md:px-5">
+        <section className="max-w-[1200px] mx-auto my-20 px-2 py-12 bg-white rounded-xl max-md:px-5">
           <div className="flex gap-5 max-md:flex-col max-md:gap-0 max-md:items-center">
             <div className="flex flex-col w-[35%] max-md:w-full">
               <div className="mt-32 text-2xl flex flex-col justify-center font-semibold text-center text-zinc-800 max-md:mt-10">
@@ -81,7 +81,7 @@ const ContactPage = () => {
           Our Location
         </h1>
 
-        <p className="mt-7 mb-[20px] text-base font-medium text-center text-stone-500 max-md:max-w-full">
+        <p className="mb-[100px] text-base font-medium text-center text-stone-500 max-md:max-w-full">
           Address : 41/14 A, Hazi Afsar Uddin Road, Zigatola, Dhaka
           <br />
           Phone : +8801743136127
