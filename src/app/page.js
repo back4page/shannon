@@ -53,13 +53,13 @@ function Home() {
           </p>
         </SectionHeader>
         <div className="px-5 mt-14 max-w-full w-[544px] max-md:mt-10">
-          <div className="flex gap-5 max-md:flex-col max-md:gap-0">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-5">
             <div className="flex flex-col w-3/12 max-md:ml-0 max-md:w-full">
               <div className="flex justify-center items-center px-7 mx-auto bg-indigo-200 rounded-full h-[100px] w-[100px] max-md:px-5 max-md:mt-10">
                 <img loading="lazy" srcSet={'./coding.png'} />
               </div>
             </div>
-            <div className="flex flex-col ml-5 w-3/12 max-md:ml-0 max-md:w-full">
+            <div className="flex flex-col w-3/12 max-md:ml-0 max-md:w-full">
               <div className="flex justify-center items-center px-7 mx-auto bg-orange-200 rounded-full h-[100px] w-[100px] max-md:px-5 max-md:mt-10">
                 <img
                   loading="lazy"
@@ -69,7 +69,7 @@ function Home() {
                 />
               </div>
             </div>
-            <div className="flex flex-col ml-5 w-3/12 max-md:ml-0 max-md:w-full">
+            <div className="flex flex-col w-3/12 max-md:ml-0 max-md:w-full">
               <div className="flex justify-center items-center px-7 mx-auto bg-blue-200 rounded-full h-[100px] w-[100px] max-md:px-5 max-md:mt-10">
                 <img
                   loading="lazy"
@@ -79,7 +79,7 @@ function Home() {
                 />
               </div>
             </div>
-            <div className="flex flex-col ml-5 w-3/12 max-md:ml-0 max-md:w-full">
+            <div className="flex flex-col w-3/12 max-md:ml-0 max-md:w-full">
               <div className="flex justify-center items-center px-7 mx-auto bg-red-200 rounded-full h-[100px] w-[100px] max-md:px-5 max-md:mt-10">
                 <img loading="lazy" srcSet={'./layers.png'} />
               </div>
@@ -100,7 +100,7 @@ function Home() {
             className="justify-center px-8 py-3 mt-5 font-semibold text-sky-500 whitespace-nowrap border-2 border-sky-500 border-solid rounded-[30px] max-md:px-5"
             tabIndex="0"
           >
-            Let’s Discuss your projects
+            Let's Discuss your projects
           </button>
         </section>
       </div>
