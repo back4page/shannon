@@ -12,7 +12,7 @@ function Header() {
           <img
             loading="lazy"
             src={'./logo.png'}
-            className="max-w-full  w-[220px]"
+            className="max-w-full  w-[200px]"
           />
         </Link>
         <svg
