@@ -36,12 +36,6 @@ function Footer() {
             <Link href="/resource" className={linkStyles}>
               Resource
             </Link>
-            <Link href="/contact" className={linkStyles}>
-              Contact
-            </Link>
-            <Link href="/how-we-work" className={linkStyles}>
-              How We Work
-            </Link>
           </div>
 
           <div className="flex flex-col">
@@ -51,6 +45,12 @@ function Footer() {
             </Link>
             <Link href="/terms-and-conditions" className={linkStyles}>
               Terms & Conditions
+            </Link>
+            <Link href="/contact" className={linkStyles}>
+              Contact
+            </Link>
+            <Link href="/how-we-work" className={linkStyles}>
+              How We Work
             </Link>
           </div>
         </div>
