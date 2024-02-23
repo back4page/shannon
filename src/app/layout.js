@@ -7,7 +7,8 @@ import Header from '@/components/Header';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
-  title: 'Shannon IT',
+  title:
+    'Shannon IT | Innovative Solutions: Your Partner in Digital Transformation',
   description: 'Innovative Solutions',
 };
 

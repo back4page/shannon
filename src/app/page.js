@@ -19,10 +19,6 @@ const Button = ({ label }) => (
   </button>
 );
 
-{
-  /*  */
-}
-
 const SectionHeader = ({ title, subtitle, children }) => (
   <>
     {title && (
