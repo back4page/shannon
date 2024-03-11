@@ -58,10 +58,27 @@ function Footer() {
           <div>
             <h1 className="text-xl font-bold mb-4">Connect Us On</h1>
             <div className="flex gap-5">
-              <FaFacebookF className="text-blue-500 text-xl" />
-              <FaTwitter className="text-blue-400 text-xl" />
-              <FaLinkedinIn className="text-blue-600 text-xl" />
-              <FaInstagramSquare className="text-[#d62976] text-xl" />
+              <a
+                href="https://www.facebook.com/shannonit?mibextid=ZbWKwL"
+                target="_blank"
+              >
+                <FaFacebookF className="text-blue-500 text-xl" />
+              </a>
+              <a href="" target="_blank">
+                <FaTwitter className="text-blue-400 text-xl" />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/shannonit-shannonit-7b2a252b9/"
+                target="_blank"
+              >
+                <FaLinkedinIn className="text-blue-600 text-xl" />
+              </a>
+              <a
+                href="https://www.instagram.com/shannonitfirm/"
+                target="_blank"
+              >
+                <FaInstagramSquare className="text-[#d62976] text-xl" />
+              </a>
             </div>
           </div>
         </div>

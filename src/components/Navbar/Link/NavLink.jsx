@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { motion } from 'framer-motion';
 const NavLink = ({ item, setHidden }) => {
   const pathName = usePathname();
   const linkClasses =

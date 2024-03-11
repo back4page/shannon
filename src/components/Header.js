@@ -2,12 +2,18 @@
 import { useState } from 'react';
 import NavLinks from './Navbar/NavLinks';
 import Link from 'next/link';
+import { motion } from 'framer-motion';
 
 function Header() {
   const [hidden, setHidden] = useState(false);
   return (
     <header className="bg-white">
-      <nav className="flex flex-wrap items-center justify-between max-w-[1400px] w-full mx-auto py-0 lg:py-3 px-4 text-lg text-gray-700 ">
+      <motion.nav
+        initial={{ opacity: 0, y: -100 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        className="flex flex-wrap items-center justify-between max-w-[1400px] w-full mx-auto py-0 lg:py-3 px-4 text-lg text-gray-700 "
+      >
         <Link href="/">
           <img
             loading="lazy"
@@ -41,7 +47,7 @@ function Header() {
             <NavLinks setHidden={setHidden} />
           </ul>
         </div>
-      </nav>
+      </motion.nav>
     </header>
   );
 }
