@@ -1,5 +1,6 @@
 const page = () => {
-  const processContainerStyle = 'pt-10 max-w-4xl mx-auto';
+  const processContainerStyle =
+    'pb-10 pl-10 max-w-4xl mx-auto border-l-2 border-blue-400 relative';
   const processTitleStyle = 'font-bold mb-6';
   const processDescStyle = 'text-gray-600';
   return (
@@ -36,6 +37,9 @@ const page = () => {
           </div>
           <div>
             <div className={processContainerStyle}>
+              <div className="absolute -top-2 -left-4 px-3 py-1 bg-blue-500 rounded-full text-white">
+                1
+              </div>
               <h2 className={processTitleStyle}>
                 Requirement Gathering and Analysis
               </h2>
@@ -46,6 +50,9 @@ const page = () => {
               </p>
             </div>
             <div className={processContainerStyle}>
+              <div className="absolute -top-2 -left-4 px-3 py-1 bg-blue-500 rounded-full text-white">
+                2
+              </div>
               <h2 className={processTitleStyle}>Project Planning</h2>
               <p className={processDescStyle}>
                 Create a project plan outlining tasks, timelines, resources, and
@@ -54,6 +61,9 @@ const page = () => {
               </p>
             </div>
             <div className={processContainerStyle}>
+              <div className="absolute -top-2 -left-4 px-3 py-1 bg-blue-500 rounded-full text-white">
+                3
+              </div>
               <h2 className={processTitleStyle}>Design Phase</h2>
               <p className={processDescStyle}>
                 Design the architecture and system components based on the
@@ -62,6 +72,9 @@ const page = () => {
               </p>
             </div>
             <div className={processContainerStyle}>
+              <div className="absolute -top-2 -left-4 px-3 py-1 bg-blue-500 rounded-full text-white">
+                4
+              </div>
               <h2 className={processTitleStyle}>Development</h2>
               <p className={processDescStyle}>
                 Write code according to the design specifications. Conduct
@@ -71,6 +84,9 @@ const page = () => {
               </p>
             </div>
             <div className={processContainerStyle}>
+              <div className="absolute -top-2 -left-4 px-3 py-1 bg-blue-500 rounded-full text-white">
+                5
+              </div>
               <h2 className={processTitleStyle}>Testing</h2>
               <p className={processDescStyle}>
                 Perform various testing activities such as functional testing,
@@ -79,6 +95,9 @@ const page = () => {
               </p>
             </div>
             <div className={processContainerStyle}>
+              <div className="absolute -top-2 -left-4 px-3 py-1 bg-blue-500 rounded-full text-white">
+                6
+              </div>
               <h2 className={processTitleStyle}>Deployment and Release</h2>
               <p className={processDescStyle}>
                 Prepare the software for deployment to production environments.
@@ -88,6 +107,9 @@ const page = () => {
               </p>
             </div>
             <div className={processContainerStyle}>
+              <div className="absolute -top-2 -left-4 px-3 py-1 bg-blue-500 rounded-full text-white">
+                7
+              </div>
               <h2 className={processTitleStyle}>Maintenance and Support</h2>
               <p className={processDescStyle}>
                 Provide ongoing maintenance and support for the software
@@ -97,6 +119,9 @@ const page = () => {
               </p>
             </div>
             <div className={processContainerStyle}>
+              <div className="absolute -top-2 -left-4 px-3 py-1 bg-blue-500 rounded-full text-white">
+                8
+              </div>
               <h2 className={processTitleStyle}>Documentation</h2>
               <p className={processDescStyle}>
                 Document the software architecture, design decisions, and
@@ -106,6 +131,9 @@ const page = () => {
               </p>
             </div>
             <div className={processContainerStyle}>
+              <div className="absolute -top-2 -left-4 px-3 py-1 bg-blue-500 rounded-full text-white">
+                9
+              </div>
               <h2 className={processTitleStyle}>Continuous Improvement</h2>
               <p className={processDescStyle}>
                 Collect feedback from users and stakeholders to identify areas
@@ -115,7 +143,10 @@ const page = () => {
                 enhance efficiency and quality.
               </p>
             </div>
-            <div className={processContainerStyle}>
+            <div className="pb-10 pl-10 max-w-4xl mx-auto relative">
+              <div className="absolute -top-2 -left-4 px-2 py-1 bg-blue-500 rounded-full text-white">
+                10
+              </div>
               <h2 className={processTitleStyle}>Project Closure</h2>
               <p className={processDescStyle}>
                 Evaluate the project against initial objectives and
