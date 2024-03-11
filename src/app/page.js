@@ -1,3 +1,4 @@
+'use client';
 import { RiBarChartBoxLine } from 'react-icons/ri';
 import { IoHappyOutline } from 'react-icons/io5';
 import { LuBarChart3 } from 'react-icons/lu';
@@ -9,9 +10,25 @@ import { TbMoneybag } from 'react-icons/tb';
 import { MdOutlineRestaurantMenu } from 'react-icons/md';
 import { MdOutlineTravelExplore } from 'react-icons/md';
 import { MdOutlineReduceCapacity } from 'react-icons/md';
+import { motion } from 'framer-motion';
 
 const ServiceCard = ({ image, title, description }) => (
-  <div className="flex flex-col w-3/12 max-md:ml-0 max-md:w-full">
+  <motion.div
+    initial={{
+      opacity: 0,
+      // if odd index card,slide from right instead of left
+      y: 100,
+    }}
+    whileInView={{
+      opacity: 1,
+      y: 0, // Slide in to its original position
+      transition: {
+        duration: 0.5, // Animation duration
+      },
+    }}
+    viewport={{ once: true }}
+    className="flex flex-col w-3/12 max-md:ml-0 max-md:w-full"
+  >
     <div className="flex flex-col grow px-4 py-11 w-full rounded-xl shadow-2xl bg-white bg-opacity-40 max-md:mt-6">
       <img
         loading="lazy"
@@ -22,7 +39,7 @@ const ServiceCard = ({ image, title, description }) => (
       <h2 className="mt-7 text-xl font-bold text-stone-700">{title}</h2>
       <p className="mt-5 text-sm text-stone-500">{description}</p>
     </div>
-  </div>
+  </motion.div>
 );
 
 const Button = ({ label }) => (
@@ -51,16 +68,31 @@ function Home() {
   return (
     <main>
       <div className="flex flex-col items-center bg-gradient-to-r from-sky-100 to-orange-50 pb-5">
-        <SectionHeader title="">
-          <h2 className="mt-20 text-6xl font-semibold text-center text-stone-700 max-md:mt-10 max-md:max-w-full max-md:text-4xl px-2">
+        <SectionHeader>
+          <motion.h2
+            initial={{ opacity: 0, y: -100 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.3, delay: 0.2 }}
+            className="mt-20 text-6xl font-semibold text-center text-stone-700 max-md:mt-10 max-md:max-w-full max-md:text-4xl px-2"
+          >
             Innovative Solutions: Your <br /> Partner in Digital Transformation
-          </h2>
-          <p className="mt-12 text-xl font-medium text-center text-stone-500 max-md:max-w-full">
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0, y: -100 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.3, delay: 0.4 }}
+            className="mt-12 text-xl font-medium text-center text-stone-500 max-md:max-w-full"
+          >
             Let your creativity shine and start <br /> building your website
             today and impress your visitors.
-          </p>
+          </motion.p>
         </SectionHeader>
-        <div className="px-5 mt-14 max-w-full w-[544px] max-md:mt-10">
+        <motion.div
+          initial={{ opacity: 0, y: -100 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.2, delay: 0.6 }}
+          className="px-5 mt-14 max-w-full w-[544px] max-md:mt-10"
+        >
           <div className="grid grid-cols-2 md:grid-cols-4 gap-5">
             <div className="flex flex-col w-3/12 max-md:ml-0 max-md:w-full">
               <div className="flex justify-center items-center px-7 mx-auto bg-indigo-200 rounded-full h-[100px] w-[100px] max-md:px-5 max-md:mt-10">
@@ -93,9 +125,20 @@ function Home() {
               </div>
             </div>
           </div>
-        </div>
-        <Button label="Get A Quotes" />
-        <section className="flex flex-col mt-[20px] mx-2 items-center px-16 py-11 text-base shadow-lg bg-gradient-to-r from-sky-100 to-orange-50 bg-opacity-10 rounded-[30px] xl:w-[60%] max-md:px-5">
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: -100 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.2, delay: 0.8 }}
+        >
+          <Button label="Get A Quotes" />
+        </motion.div>
+        <motion.section
+          initial={{ opacity: 0, x: -100 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.2, delay:1 }}
+          className="flex flex-col mt-[20px] mx-2 items-center px-16 py-11 text-base shadow-lg bg-gradient-to-r from-sky-100 to-orange-50 bg-opacity-10 rounded-[30px] xl:w-[60%] max-md:px-5"
+        >
           <header className="text-3xl font-bold text-black text-opacity-80 text-center max-md:max-w-full">
             Solving complex problems, effortlessly
           </header>
@@ -110,7 +153,7 @@ function Home() {
           >
             Let's Discuss your projects
           </button>
-        </section>
+        </motion.section>
       </div>
       <div className="flex flex-col items-center bg-gradient-to-bl from-sky-100 to-orange-50 pb-5">
         <h1 className="mt-24 text-6xl font-bold text-center whitespace-nowrap text-stone-700 max-md:mt-10 max-md:text-4xl">
@@ -194,7 +237,7 @@ function Home() {
             today and impress your visitors.
           </p>
           <section className="px-5 mt-14 w-full max-w-[1164px] max-md:mt-10 max-md:max-w-full">
-            <div className="grid grid-cols-4 gap-5">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
               <div className="flex flex-col grow px-4 py-11 w-full rounded-xl shadow-2xl bg-white bg-opacity-40 max-md:mt-6">
                 <MdCastForEducation className="text-4xl" />
                 <h1 className="mt-7 text-xl font-bold text-stone-700">

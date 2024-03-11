@@ -11,7 +11,7 @@ function Header() {
       <motion.nav
         initial={{ opacity: 0, y: -100 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
+        transition={{ duration: 0.1 }}
         className="flex flex-wrap items-center justify-between max-w-[1400px] w-full mx-auto py-0 lg:py-3 px-4 text-lg text-gray-700 "
       >
         <Link href="/">
