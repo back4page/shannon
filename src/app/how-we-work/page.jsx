@@ -1,6 +1,6 @@
 const page = () => {
   const processContainerStyle =
-    'pb-10 pl-10 max-w-4xl mx-auto border-l-2 border-blue-400 relative';
+    'pb-10 pl-20 max-w-5xl mx-auto border-l-2 border-blue-400 relative';
   const processTitleStyle = 'font-bold mb-6';
   const processDescStyle = 'text-gray-600';
   return (
@@ -30,7 +30,7 @@ const page = () => {
             <h1 className="text-center font-bold text-4xl mb-6">
               Our working process
             </h1>
-            <p className="text-center text-gray-600 mb-5">
+            <p className="text-center text-gray-600 mb-16">
               Let your creativity shine and start <br />
               building your website today and impress your visitors.
             </p>
@@ -143,7 +143,7 @@ const page = () => {
                 enhance efficiency and quality.
               </p>
             </div>
-            <div className="pb-10 pl-10 max-w-4xl mx-auto relative">
+            <div className="pb-10 pl-20 max-w-5xl mx-auto relative">
               <div className="absolute -top-2 -left-4 px-2 py-1 bg-blue-500 rounded-full text-white">
                 10
               </div>
