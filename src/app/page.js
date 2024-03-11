@@ -286,7 +286,22 @@ function Home() {
           </p>
           <section className="px-5 mt-14 w-full max-w-[1164px] max-md:mt-10 max-md:max-w-full">
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
-              <div className="flex flex-col grow px-4 py-11 w-full rounded-xl shadow-2xl bg-white bg-opacity-40 max-md:mt-6">
+              <motion.div
+                initial={{
+                  opacity: 0,
+                  // if odd index card,slide from right instead of left
+                  y: 100,
+                }}
+                whileInView={{
+                  opacity: 1,
+                  y: 0, // Slide in to its original position
+                  transition: {
+                    duration: 0.5, // Animation duration
+                  },
+                }}
+                viewport={{ once: true }}
+                className="flex flex-col grow px-4 py-11 w-full rounded-xl shadow-2xl bg-white bg-opacity-40 max-md:mt-6"
+              >
                 <MdCastForEducation className="text-4xl" />
                 <h1 className="mt-7 text-xl font-bold text-stone-700">
                   Education
@@ -298,8 +313,23 @@ function Home() {
                   experiences, ensuring a conducive environment for academic
                   success.
                 </p>
-              </div>
-              <div className="flex flex-col grow px-4 py-11 w-full rounded-xl shadow-2xl bg-white bg-opacity-40 max-md:mt-6">
+              </motion.div>
+              <motion.div
+                initial={{
+                  opacity: 0,
+                  // if odd index card,slide from right instead of left
+                  y: 100,
+                }}
+                whileInView={{
+                  opacity: 1,
+                  y: 0, // Slide in to its original position
+                  transition: {
+                    duration: 0.5, // Animation duration
+                  },
+                }}
+                viewport={{ once: true }}
+                className="flex flex-col grow px-4 py-11 w-full rounded-xl shadow-2xl bg-white bg-opacity-40 max-md:mt-6"
+              >
                 <RiInfinityLine className="text-4xl" />
                 <h1 className="mt-7 text-xl font-bold text-stone-700">
                   Garments
@@ -311,8 +341,23 @@ function Home() {
                   decision-making, empowering garment manufacturers to stay
                   competitive in a dynamic market.
                 </p>
-              </div>
-              <div className="flex flex-col grow px-4 py-11 w-full rounded-xl shadow-2xl bg-white bg-opacity-40 max-md:mt-6">
+              </motion.div>
+              <motion.div
+                initial={{
+                  opacity: 0,
+                  // if odd index card,slide from right instead of left
+                  y: 100,
+                }}
+                whileInView={{
+                  opacity: 1,
+                  y: 0, // Slide in to its original position
+                  transition: {
+                    duration: 0.5, // Animation duration
+                  },
+                }}
+                viewport={{ once: true }}
+                className="flex flex-col grow px-4 py-11 w-full rounded-xl shadow-2xl bg-white bg-opacity-40 max-md:mt-6"
+              >
                 <TbHealthRecognition className="text-4xl" />
                 <h1 className="mt-7 text-xl font-bold text-stone-700">
                   Healthcare
@@ -324,8 +369,23 @@ function Home() {
                   data security, we empower healthcare providers to deliver
                   high-quality care while improving operational efficiency.
                 </p>
-              </div>
-              <div className="flex flex-col grow px-4 py-11 w-full rounded-xl shadow-2xl bg-white bg-opacity-40 max-md:mt-6">
+              </motion.div>
+              <motion.div
+                initial={{
+                  opacity: 0,
+                  // if odd index card,slide from right instead of left
+                  y: 100,
+                }}
+                whileInView={{
+                  opacity: 1,
+                  y: 0, // Slide in to its original position
+                  transition: {
+                    duration: 0.5, // Animation duration
+                  },
+                }}
+                viewport={{ once: true }}
+                className="flex flex-col grow px-4 py-11 w-full rounded-xl shadow-2xl bg-white bg-opacity-40 max-md:mt-6"
+              >
                 <RiMoneyDollarCircleLine className="text-4xl" />
                 <h1 className="mt-7 text-xl font-bold text-stone-700">
                   Fintech
@@ -338,8 +398,23 @@ function Home() {
                   we drive digital transformation in the financial sector,
                   enhancing agility and customer satisfaction.
                 </p>
-              </div>
-              <div className="flex flex-col grow px-4 py-11 w-full rounded-xl shadow-2xl bg-white bg-opacity-40 max-md:mt-6">
+              </motion.div>
+              <motion.div
+                initial={{
+                  opacity: 0,
+                  // if odd index card,slide from right instead of left
+                  y: 100,
+                }}
+                whileInView={{
+                  opacity: 1,
+                  y: 0, // Slide in to its original position
+                  transition: {
+                    duration: 0.5, // Animation duration
+                  },
+                }}
+                viewport={{ once: true }}
+                className="flex flex-col grow px-4 py-11 w-full rounded-xl shadow-2xl bg-white bg-opacity-40 max-md:mt-6"
+              >
                 <TbMoneybag className="text-4xl" />
                 <h1 className="mt-7 text-xl font-bold text-stone-700">Ngo</h1>
                 <p className="mt-5 text-sm text-stone-500">
@@ -349,8 +424,23 @@ function Home() {
                   allocation, we empower NGOs to maximize their social impact
                   and achieve their mission effectively.
                 </p>
-              </div>
-              <div className="flex flex-col grow px-4 py-11 w-full rounded-xl shadow-2xl bg-white bg-opacity-40 max-md:mt-6">
+              </motion.div>
+              <motion.div
+                initial={{
+                  opacity: 0,
+                  // if odd index card,slide from right instead of left
+                  y: 100,
+                }}
+                whileInView={{
+                  opacity: 1,
+                  y: 0, // Slide in to its original position
+                  transition: {
+                    duration: 0.5, // Animation duration
+                  },
+                }}
+                viewport={{ once: true }}
+                className="flex flex-col grow px-4 py-11 w-full rounded-xl shadow-2xl bg-white bg-opacity-40 max-md:mt-6"
+              >
                 <MdOutlineRestaurantMenu className="text-4xl" />
                 <h1 className="mt-7 text-xl font-bold text-stone-700">
                   Restaurant
@@ -363,8 +453,23 @@ function Home() {
                   optimization, we help restaurants enhance operational
                   efficiency and elevate guest experiences.
                 </p>
-              </div>
-              <div className="flex flex-col grow px-4 py-11 w-full rounded-xl shadow-2xl bg-white bg-opacity-40 max-md:mt-6">
+              </motion.div>
+              <motion.div
+                initial={{
+                  opacity: 0,
+                  // if odd index card,slide from right instead of left
+                  y: 100,
+                }}
+                whileInView={{
+                  opacity: 1,
+                  y: 0, // Slide in to its original position
+                  transition: {
+                    duration: 0.5, // Animation duration
+                  },
+                }}
+                viewport={{ once: true }}
+                className="flex flex-col grow px-4 py-11 w-full rounded-xl shadow-2xl bg-white bg-opacity-40 max-md:mt-6"
+              >
                 <MdOutlineTravelExplore className="text-4xl" />
                 <h1 className="mt-7 text-xl font-bold text-stone-700">
                   Travel
@@ -377,8 +482,23 @@ function Home() {
                   analysis, we empower travel agencies and tour operators to
                   provide memorable and seamless travel experiences.
                 </p>
-              </div>
-              <div className="flex flex-col grow px-4 py-11 w-full rounded-xl shadow-2xl bg-white bg-opacity-40 max-md:mt-6">
+              </motion.div>
+              <motion.div
+                initial={{
+                  opacity: 0,
+                  // if odd index card,slide from right instead of left
+                  y: 100,
+                }}
+                whileInView={{
+                  opacity: 1,
+                  y: 0, // Slide in to its original position
+                  transition: {
+                    duration: 0.5, // Animation duration
+                  },
+                }}
+                viewport={{ once: true }}
+                className="flex flex-col grow px-4 py-11 w-full rounded-xl shadow-2xl bg-white bg-opacity-40 max-md:mt-6"
+              >
                 <MdOutlineReduceCapacity className="text-4xl" />
                 <h1 className="mt-7 text-xl font-bold text-stone-700">
                   Retail
@@ -391,7 +511,7 @@ function Home() {
                   empower retailers to drive sales, improve customer
                   satisfaction, and stay ahead in a competitive market.
                 </p>
-              </div>
+              </motion.div>
             </div>
           </section>
         </div>
