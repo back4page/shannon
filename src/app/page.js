@@ -1,3 +1,7 @@
+import { RiBarChartBoxLine } from 'react-icons/ri';
+import { IoHappyOutline } from 'react-icons/io5';
+import { LuBarChart3 } from 'react-icons/lu';
+
 const ServiceCard = ({ image, title, description }) => (
   <div className="flex flex-col w-3/12 max-md:ml-0 max-md:w-full">
     <div className="flex flex-col grow px-4 py-11 w-full rounded-xl shadow-2xl bg-white bg-opacity-40 max-md:mt-6">
@@ -142,6 +146,34 @@ function Home() {
           </div>
         </section>
         <Button label="View All" />
+
+        {/* come back and add finish  */}
+        <div className="bg-[#6b727711] w-screen py-12">
+          <div className="max-w-lg mx-auto flex gap-5">
+            <div className="bg-white rounded-md px-5 py-5">
+              <RiBarChartBoxLine className="text-4xl mb-2 text-amber-500" />
+              <div className="flex justify-between gap-5 items-center">
+                <h1 className="text-4xl text-amber-500 font-semibold">30+</h1>
+                <h1 className="text-xl">Projects Done</h1>
+              </div>
+            </div>
+            <div className="bg-white rounded-md px-5 py-5">
+              <IoHappyOutline className="text-4xl mb-2 text-cyan-500" />
+              <div className="flex justify-between gap-5 items-center">
+                <h1 className="text-4xl text-cyan-500 font-semibold">8+</h1>
+                <h1 className="text-xl">Happy Client</h1>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-md px-5 py-5">
+              <RiBarChartBoxLine className="text-4xl mb-2 text-teal-500" />
+              <div className="flex justify-between gap-5 items-center">
+                <h1 className="text-4xl text-teal-500 font-semibold">20+</h1>
+                <h1 className="text-xl">Growing Team</h1>
+              </div>
+            </div>
+          </div>
+        </div>
         <div className=" flex flex-col justify-center items-center">
           <h1 className="mt-20 text-6xl font-bold text-center text-stone-700 max-md:mt-10 max-md:max-w-full max-md:text-4xl">
             Get A 30 Min Free Consultation
