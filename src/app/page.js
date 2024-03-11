@@ -1,6 +1,14 @@
 import { RiBarChartBoxLine } from 'react-icons/ri';
 import { IoHappyOutline } from 'react-icons/io5';
 import { LuBarChart3 } from 'react-icons/lu';
+import { MdCastForEducation } from 'react-icons/md';
+import { RiInfinityLine } from 'react-icons/ri';
+import { TbHealthRecognition } from 'react-icons/tb';
+import { RiMoneyDollarCircleLine } from 'react-icons/ri';
+import { TbMoneybag } from 'react-icons/tb';
+import { MdOutlineRestaurantMenu } from 'react-icons/md';
+import { MdOutlineTravelExplore } from 'react-icons/md';
+import { MdOutlineReduceCapacity } from 'react-icons/md';
 
 const ServiceCard = ({ image, title, description }) => (
   <div className="flex flex-col w-3/12 max-md:ml-0 max-md:w-full">
@@ -147,17 +155,16 @@ function Home() {
         </section>
         <Button label="View All" />
 
-        {/* come back and add finish  */}
-        <div className="bg-[#6b727711] w-screen py-12">
-          <div className="max-w-lg mx-auto flex gap-5">
-            <div className="bg-white rounded-md px-5 py-5">
+        <div className="bg-[#6b727711] w-full py-16">
+          <div className="max-w-2xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-5">
+            <div className="bg-[#ffffff63] rounded-md px-5 py-5">
               <RiBarChartBoxLine className="text-4xl mb-2 text-amber-500" />
               <div className="flex justify-between gap-5 items-center">
                 <h1 className="text-4xl text-amber-500 font-semibold">30+</h1>
                 <h1 className="text-xl">Projects Done</h1>
               </div>
             </div>
-            <div className="bg-white rounded-md px-5 py-5">
+            <div className="bg-[#ffffff63] rounded-md px-5 py-5">
               <IoHappyOutline className="text-4xl mb-2 text-cyan-500" />
               <div className="flex justify-between gap-5 items-center">
                 <h1 className="text-4xl text-cyan-500 font-semibold">8+</h1>
@@ -165,8 +172,8 @@ function Home() {
               </div>
             </div>
 
-            <div className="bg-white rounded-md px-5 py-5">
-              <RiBarChartBoxLine className="text-4xl mb-2 text-teal-500" />
+            <div className="bg-[#ffffff63] rounded-md px-5 py-5">
+              <LuBarChart3 className="text-4xl mb-2 text-teal-500" />
               <div className="flex justify-between gap-5 items-center">
                 <h1 className="text-4xl text-teal-500 font-semibold">20+</h1>
                 <h1 className="text-xl">Growing Team</h1>
@@ -174,6 +181,126 @@ function Home() {
             </div>
           </div>
         </div>
+
+        {/* come back add add section */}
+
+        <div>
+          <h1 className="mt-24 text-6xl font-bold text-center whitespace-nowrap text-stone-700 max-md:mt-10 max-md:text-4xl">
+            Industries We Serve
+          </h1>
+
+          <p className="mt-7 text-xl font-medium text-center text-stone-500 max-md:max-w-full">
+            Let your creativity shine and start <br /> building your website
+            today and impress your visitors.
+          </p>
+          <section className="px-5 mt-14 w-full max-w-[1164px] max-md:mt-10 max-md:max-w-full">
+            <div className="grid grid-cols-4 gap-5">
+              <div className="flex flex-col grow px-4 py-11 w-full rounded-xl shadow-2xl bg-white bg-opacity-40 max-md:mt-6">
+                <MdCastForEducation className="text-4xl" />
+                <h1 className="mt-7 text-xl font-bold text-stone-700">
+                  Education
+                </h1>
+                <p className="mt-5 text-sm text-stone-500">
+                  When it comes to developing disruptive web products, Shannon
+                  takes an unconventional approach. Continue exploring new
+                  technologies, business models, and design approaches to create
+                  truly disruptive web products that can make a lasting impact
+                  on the industry
+                </p>
+              </div>
+              <div className="flex flex-col grow px-4 py-11 w-full rounded-xl shadow-2xl bg-white bg-opacity-40 max-md:mt-6">
+                <RiInfinityLine className="text-4xl" />
+                <h1 className="mt-7 text-xl font-bold text-stone-700">
+                  Garments
+                </h1>
+                <p className="mt-5 text-sm text-stone-500">
+                  When it comes to developing disruptive web products, Shannon
+                  takes an unconventional approach. Continue exploring new
+                  technologies, business models, and design approaches to create
+                  truly disruptive web products that can make a lasting impact
+                  on the industry
+                </p>
+              </div>
+              <div className="flex flex-col grow px-4 py-11 w-full rounded-xl shadow-2xl bg-white bg-opacity-40 max-md:mt-6">
+                <TbHealthRecognition className="text-4xl" />
+                <h1 className="mt-7 text-xl font-bold text-stone-700">
+                  Healthcare
+                </h1>
+                <p className="mt-5 text-sm text-stone-500">
+                  When it comes to developing disruptive web products, Shannon
+                  takes an unconventional approach. Continue exploring new
+                  technologies, business models, and design approaches to create
+                  truly disruptive web products that can make a lasting impact
+                  on the industry
+                </p>
+              </div>
+              <div className="flex flex-col grow px-4 py-11 w-full rounded-xl shadow-2xl bg-white bg-opacity-40 max-md:mt-6">
+                <RiMoneyDollarCircleLine className="text-4xl" />
+                <h1 className="mt-7 text-xl font-bold text-stone-700">
+                  Fintech
+                </h1>
+                <p className="mt-5 text-sm text-stone-500">
+                  When it comes to developing disruptive web products, Shannon
+                  takes an unconventional approach. Continue exploring new
+                  technologies, business models, and design approaches to create
+                  truly disruptive web products that can make a lasting impact
+                  on the industry
+                </p>
+              </div>
+              <div className="flex flex-col grow px-4 py-11 w-full rounded-xl shadow-2xl bg-white bg-opacity-40 max-md:mt-6">
+                <TbMoneybag className="text-4xl" />
+                <h1 className="mt-7 text-xl font-bold text-stone-700">Ngo</h1>
+                <p className="mt-5 text-sm text-stone-500">
+                  When it comes to developing disruptive web products, Shannon
+                  takes an unconventional approach. Continue exploring new
+                  technologies, business models, and design approaches to create
+                  truly disruptive web products that can make a lasting impact
+                  on the industry
+                </p>
+              </div>
+              <div className="flex flex-col grow px-4 py-11 w-full rounded-xl shadow-2xl bg-white bg-opacity-40 max-md:mt-6">
+                <MdOutlineRestaurantMenu className="text-4xl" />
+                <h1 className="mt-7 text-xl font-bold text-stone-700">
+                  Restaurant
+                </h1>
+                <p className="mt-5 text-sm text-stone-500">
+                  When it comes to developing disruptive web products, Shannon
+                  takes an unconventional approach. Continue exploring new
+                  technologies, business models, and design approaches to create
+                  truly disruptive web products that can make a lasting impact
+                  on the industry
+                </p>
+              </div>
+              <div className="flex flex-col grow px-4 py-11 w-full rounded-xl shadow-2xl bg-white bg-opacity-40 max-md:mt-6">
+                <MdOutlineTravelExplore className="text-4xl" />
+                <h1 className="mt-7 text-xl font-bold text-stone-700">
+                  Travel
+                </h1>
+                <p className="mt-5 text-sm text-stone-500">
+                  When it comes to developing disruptive web products, Shannon
+                  takes an unconventional approach. Continue exploring new
+                  technologies, business models, and design approaches to create
+                  truly disruptive web products that can make a lasting impact
+                  on the industry
+                </p>
+              </div>
+              <div className="flex flex-col grow px-4 py-11 w-full rounded-xl shadow-2xl bg-white bg-opacity-40 max-md:mt-6">
+                <MdOutlineReduceCapacity className="text-4xl" />
+                <h1 className="mt-7 text-xl font-bold text-stone-700">
+                  Retail
+                </h1>
+                <p className="mt-5 text-sm text-stone-500">
+                  When it comes to developing disruptive web products, Shannon
+                  takes an unconventional approach. Continue exploring new
+                  technologies, business models, and design approaches to create
+                  truly disruptive web products that can make a lasting impact
+                  on the industry
+                </p>
+              </div>
+            </div>
+          </section>
+        </div>
+
         <div className=" flex flex-col justify-center items-center">
           <h1 className="mt-20 text-6xl font-bold text-center text-stone-700 max-md:mt-10 max-md:max-w-full max-md:text-4xl">
             Get A 30 Min Free Consultation
