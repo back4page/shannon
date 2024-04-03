@@ -1,9 +1,44 @@
+'use client';
+
+import { useRef, useState } from 'react';
+import emailjs from '@emailjs/browser';
+
 const ContactPage = () => {
+  const [status, setStatus] = useState('idle');
   const formFields = [
-    { label: 'Your Name', type: 'text', id: 'name' },
-    { label: 'Email Address', type: 'email', id: 'email' },
-    { label: 'Phone Number', type: 'tel', id: 'phone' },
+    { label: 'Your Name', type: 'text', id: 'name', name: 'name' },
+    { label: 'Email Address', type: 'email', id: 'email', name: 'email' },
+    { label: 'Phone Number', type: 'tel', id: 'phone', name: 'phone' },
   ];
+
+  const form = useRef();
+
+  const sendEmail = e => {
+    e.preventDefault();
+    setStatus('sending');
+
+    emailjs
+      .sendForm(
+        'service_dkaxk17',
+        'template_s8t642f',
+        form.current,
+        'BoQExZWegf8sF3Wvq'
+      )
+      .then(
+        result => {
+          form.current.name.value = '';
+          form.current.email.value = '';
+          form.current.phone.value = '';
+          form.current.message.value = '';
+          setStatus('idle');
+        },
+        error => {
+          console.log(error.text);
+          setStatus('idle');
+        }
+      );
+  };
+
   return (
     <>
       <main className="bg-gradient-to-r from-sky-100 to-orange-50">
@@ -43,7 +78,11 @@ const ContactPage = () => {
               </div>
             </div>
             <div className="w-[65%] max-md:w-full">
-              <form className="flex flex-col justify-center items-center mt-7 text-center max-md:mt-10">
+              <form
+                className="flex flex-col justify-center items-center mt-7 text-center max-md:mt-10"
+                onSubmit={sendEmail}
+                ref={form}
+              >
                 {formFields.map(field => (
                   <div key={field.id} className="w-full mt-6">
                     <label htmlFor={field.id} className="sr-only">
@@ -51,6 +90,7 @@ const ContactPage = () => {
                     </label>
                     <input
                       id={field.id}
+                      name={field.name}
                       type={field.type}
                       placeholder={field.label}
                       aria-label={field.label}
@@ -62,6 +102,7 @@ const ContactPage = () => {
                   <textarea
                     className="w-full px-4 py-2 text-zinc-500 text-xl leading-6"
                     rows="5"
+                    name="message"
                     placeholder="Your Question............"
                     aria-label="Your Question"
                   ></textarea>
@@ -70,7 +111,7 @@ const ContactPage = () => {
                   type="submit"
                   className=" w-full self-center mt-5 bg-sky-500 text-white h-[69px] rounded-[100px] px-5 py-1 text-base font-semibold leading-6 whitespace-nowrap max-md:mt-10"
                 >
-                  Send Message
+                  {status === 'idle' ? 'Send Message' : 'Sending'}
                 </button>
               </form>
             </div>
