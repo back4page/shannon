@@ -11,7 +11,7 @@ const Appointment = () => {
   }, []);
   return (
     <PopupButton
-      url="https://calendly.com/sozootoday99"
+      url="https://calendly.com/kha9647"
       rootElement={isMounted ? document.getElementById('mainBody') : ''}
       text="Appointment"
       className="px-12 block py-3 text-sm text-white bg-sky-500 shadow-lg rounded-full max-md:px-5"
