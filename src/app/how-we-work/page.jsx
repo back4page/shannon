@@ -1,3 +1,5 @@
+import Appointment from '@/components/Appointment';
+
 const page = () => {
   const processContainerStyle =
     'pb-10 pl-20 max-w-5xl mx-auto border-l-2 border-blue-400 relative';
@@ -169,9 +171,9 @@ const page = () => {
             impress your visitors.
           </p>
 
-          <button className="mb-[40px] px-8 py-4 mt-16 text-base font-bold text-center text-white whitespace-nowrap bg-sky-500 shadow-lg rounded-[100px] max-md:px-5 max-md:mt-10">
-            Appointment
-          </button>
+          <div className="py-10">
+            <Appointment />
+          </div>
         </div>
       </div>
     </>

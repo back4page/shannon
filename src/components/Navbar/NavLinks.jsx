@@ -1,5 +1,6 @@
 'use client';
 import NavLink from './Link/NavLink';
+import Appointment from '../Appointment';
 
 const NavLinks = ({ setHidden }) => {
   const links = [
@@ -34,10 +35,7 @@ const NavLinks = ({ setHidden }) => {
         <NavLink key={link.title} item={link} setHidden={setHidden} />
       ))}
       <li className="flex items-center">
-        <button className="px-12 block py-3 text-sm text-white bg-sky-500 shadow-lg rounded-full max-md:px-5">
-          {' '}
-          Appointment{' '}
-        </button>
+        <Appointment />
       </li>
     </>
   );

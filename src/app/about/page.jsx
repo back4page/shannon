@@ -1,3 +1,5 @@
+import Appointment from '@/components/Appointment';
+
 const images = [
   {
     src: './bayshore-logo.svg',
@@ -146,9 +148,9 @@ function AboutPage() {
             impress your visitors.
           </p>
 
-          <button className="mb-[40px] px-8 py-4 mt-16 text-base font-bold text-center text-white whitespace-nowrap bg-sky-500 shadow-lg rounded-[100px] max-md:px-5 max-md:mt-10">
-            Appointment
-          </button>
+          <div className="py-10">
+            <Appointment />
+          </div>
         </footer>
       </main>
     </>

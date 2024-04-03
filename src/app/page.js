@@ -11,6 +11,7 @@ import { MdOutlineRestaurantMenu } from 'react-icons/md';
 import { MdOutlineTravelExplore } from 'react-icons/md';
 import { MdOutlineReduceCapacity } from 'react-icons/md';
 import { motion } from 'framer-motion';
+import Appointment from '@/components/Appointment';
 
 const ServiceCard = ({ image, title, description }) => (
   <motion.div
@@ -526,9 +527,9 @@ function Home() {
             impress your visitors.
           </p>
 
-          <button className="mb-[40px] px-8 py-4 mt-16 text-base font-bold text-center text-white whitespace-nowrap bg-sky-500 shadow-lg rounded-[100px] max-md:px-5 max-md:mt-10">
-            Appointment
-          </button>
+          <div className="py-10">
+            <Appointment />
+          </div>
         </div>
       </div>
     </main>
